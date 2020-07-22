@@ -1,12 +1,15 @@
 .app {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 50px;
-  .app-header {
-    font-weight: bold;
-    font-size: 24px;
-    padding: 30px;
+  justify-content: end;
+  .app-left {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .app-right {
+    flex: 1 auto;
+    margin-left: 200px;
   }
 }

@@ -1,0 +1,14 @@
+.menu-container {
+  height: 100%;
+  padding: 10px;
+  box-shadow: 2px 0 3px lightgray;
+  .menu-logo {
+    font-size: 24px;
+    text-align: center;
+    color: skyblue;
+  }
+  .menu-item {
+    color: #444;
+    font-size: 18px;
+  }
+}
