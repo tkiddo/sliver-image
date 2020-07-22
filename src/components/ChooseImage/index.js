@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './index.scss';
 
 const CANVAS_WIDTH = 800;
-const CANVAS_HEIGHT = 800;
+const CANVAS_HEIGHT = 600;
 const SX = 0;
 const SY = 0;
 

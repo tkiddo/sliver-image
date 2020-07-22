@@ -3,8 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 30px;
 }
 
-.canvas {
+.canvas-wrapper {
+  padding: 10px;
+  border-radius: 10px;
   border: 1px solid skyblue;
+  margin: 20px;
 }
