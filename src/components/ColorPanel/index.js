@@ -18,7 +18,6 @@ const ColorPanel = (props) => {
       e.clearSelection();
     });
     return () => {
-      console.log('leave');
       clipboard.destroy();
     };
   }, []);
