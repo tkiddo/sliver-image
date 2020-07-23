@@ -4,10 +4,12 @@ import './app.scss';
 import SideMenu from './components/SideMenu';
 import ChooseImage from './components/ChooseImage';
 
+import AppRouter from './route/appRouter';
+
 const MENU = [
   {
     name: '取色器',
-    path: '/color'
+    path: '/colorpix'
   }
 ];
 
@@ -19,6 +21,7 @@ function App() {
       </div>
       <div className="app-right">
         <ChooseImage />
+        <AppRouter />
       </div>
     </div>
   );

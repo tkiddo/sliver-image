@@ -1,0 +1,19 @@
+.color-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px 0;
+  .color-block {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    margin: 0 10px;
+  }
+  .color-field {
+    width: 60px;
+  }
+  .color-value {
+    margin-right: 10px;
+  }
+}

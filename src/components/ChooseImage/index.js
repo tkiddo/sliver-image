@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './index.scss';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { setColorInfo } from '../../store/imgData/action';
 
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 600;
 const SX = 0;
 const SY = 0;
 
-const ChooseImage = () => {
+const ChooseImage = (props) => {
   const canvasRef = React.createRef();
   const [ctx, setCtx] = useState(null);
   const [canvas, setCanvas] = useState(null);
+
   const initCanvas = () => {
     const cas = canvasRef.current;
     cas.width = CANVAS_WIDTH;
@@ -20,9 +24,11 @@ const ChooseImage = () => {
       setCtx(context);
     }
   };
+
   useEffect(() => {
     initCanvas();
   }, []);
+
   const handleChange = (e) => {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     const file = e.target.files[0];
@@ -48,16 +54,23 @@ const ChooseImage = () => {
       ctx.drawImage(img, SX, SY, naturalWidth, naturalHeight, dx, dy, dWidth, dHeight);
     };
   };
+
   const handlePix = (evt) => {
+    const { setColor, location } = props;
     let x = evt.clientX;
     let y = evt.clientY;
     const rect = canvas.getBoundingClientRect();
     x -= rect.left;
     y -= rect.top;
-    console.log(x, y); // (x, y) 就是鼠标在 canvas 单击时的坐标
     const colorData = ctx.getImageData(x, y, 1, 1);
-    console.log(colorData);
+    switch (location.pathname) {
+      case '/colorpix':
+        setColor(colorData.data.join(','));
+        break;
+      default:
+    }
   };
+
   return (
     <div className="choose-wrapper">
       <input
@@ -77,4 +90,8 @@ const ChooseImage = () => {
   );
 };
 
-export default React.memo(ChooseImage);
+const mapDispatchToProps = (dispatch) => ({
+  setColor: (payload) => dispatch(setColorInfo(payload))
+});
+
+export default connect(null, mapDispatchToProps)(withRouter(ChooseImage));

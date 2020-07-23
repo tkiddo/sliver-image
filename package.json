@@ -64,6 +64,7 @@
     ]
   },
   "dependencies": {
+    "clipboard": "^2.0.6",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

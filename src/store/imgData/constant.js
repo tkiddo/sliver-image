@@ -1,0 +1,2 @@
+export const SETCOLORINFO = 'SETCOLORINFO';
+export const SETSIZEINFO = 'SETSIZEINFO';
