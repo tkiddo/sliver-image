@@ -1,3 +1,5 @@
+@import '../../assets/styles/color.scss';
+
 .choose-wrapper {
   display: flex;
   justify-content: center;
@@ -9,6 +11,6 @@
 .canvas-wrapper {
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid skyblue;
+  border: 1px solid $first;
   margin: 20px;
 }

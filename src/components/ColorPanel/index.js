@@ -37,13 +37,13 @@ const ColorPanel = (props) => {
         <span className="color-field">RGBA:</span>
         <div className="color-block" style={{ backgroundColor: `rgba(${color})` }} />
         <span className="color-value">{color}</span>
-        <span className="iconfont icon-copy" />
+        {color !== '' && <span className="iconfont icon-copy" />}
       </div>
       <div className="color-item">
         <span className="color-field">HEX:</span>
         <div className="color-block" style={{ backgroundColor: `${rgb2hex(color)}` }} />
         <span className="color-value">{rgb2hex(color)}</span>
-        <span className="iconfont icon-copy" />
+        {color !== '' && <span className="iconfont icon-copy" />}
       </div>
     </InfoContainer>
   );

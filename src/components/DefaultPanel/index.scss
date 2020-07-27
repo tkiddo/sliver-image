@@ -1,0 +1,18 @@
+@import '../../assets/styles/color.scss';
+
+.scale-bar {
+  width: 80%;
+  margin: 0 auto;
+  height: 10px;
+  background-color: $second;
+  position: relative;
+  border-radius: 5px;
+  .scale-button {
+    width: 10px;
+    height: 30px;
+    float: left;
+    background-color: $forth;
+    margin-top: -10px;
+    border-radius: 5px;
+  }
+}
